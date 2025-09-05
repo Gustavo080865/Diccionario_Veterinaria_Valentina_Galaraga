@@ -1,39 +1,141 @@
-// Palabras veterinarias poco conocidas, conjugadas
+// 100 palabras raras, conjugadas
 const data = [
-  { letra: "A", verbo: "Acicalamos", desc: "Ejecutamos un acicalamiento clínico del pelaje para detectar ectoparásitos ocultos." },
-  { letra: "B", verbo: "Bromatologamos", desc: "Analizamos y controlamos la calidad de alimentos para animales." },
-  { letra: "C", verbo: "Calcificamos", desc: "Observamos y documentamos la formación de hueso en estudios ortopédicos." },
-  { letra: "D", verbo: "Dermatologamos", desc: "Estudiamos e intervenimos patologías cutáneas con técnicas específicas." },
-  { letra: "E", verbo: "Endoscopiamos", desc: "Introducimos un endoscopio para explorar cavidades internas." },
-  { letra: "F", verbo: "Fisiopatologamos", desc: "Investigamos procesos anormales en tejidos y órganos." },
-  { letra: "G", verbo: "Gastroenterologamos", desc: "Exploramos y tratamos trastornos digestivos animales." },
-  { letra: "H", verbo: "Hematologamos", desc: "Realizamos estudios detallados de células sanguíneas." },
-  { letra: "I", verbo: "Inmunohistoquimiamos", desc: "Aplicamos técnicas inmunohistoquímicas para diagnosticar tejidos." },
-  { letra: "J", verbo: "Jeringamos", desc: "Administramos sustancias con jeringa de forma controlada." },
-  { letra: "K", verbo: "Keratotomizamos", desc: "Intervenimos quirúrgicamente la córnea con técnicas de keratotomía." },
-  { letra: "L", verbo: "Laringoscopiamos", desc: "Exploramos la laringe con instrumento especializado." },
-  { letra: "M", verbo: "Microbiologamos", desc: "Analizamos microorganismos que afectan a los animales." },
-  { letra: "N", verbo: "Necropsiamos", desc: "Ejecutamos necropsias para determinar causas de muerte." },
-  { letra: "O", verbo: "Oftalmoscopiamos", desc: "Exploramos el fondo ocular con oftalmoscopio." },
-  { letra: "P", verbo: "Parasitologamos", desc: "Estudiamos y diagnosticamos infestaciones parasitarias." },
-  { letra: "Q", verbo: "Queratinizamos", desc: "Observamos procesos de queratinización en patologías dérmicas." },
-  { letra: "R", verbo: "Rinoscopiamos", desc: "Examinamos cavidades nasales mediante rinoscopia." },
-  { letra: "S", verbo: "Serologiamos", desc: "Aplicamos pruebas serológicas para detectar anticuerpos." },
-  { letra: "T", verbo: "Traqueotomizamos", desc: "Realizamos una traqueotomía en casos de obstrucción respiratoria." },
-  { letra: "U", verbo: "Uretroscopiamos", desc: "Exploramos la uretra con fines diagnósticos." },
-  { letra: "V", verbo: "Vasectomizamos", desc: "Practicamos procedimientos de vasectomía en animales machos." },
-  { letra: "W", verbo: "Westernbloteamos", desc: "Aplicamos la técnica de Western Blot para detección de proteínas." },
-  { letra: "X", verbo: "Xenotransplantamos", desc: "Realizamos trasplantes experimentales entre especies distintas." },
-  { letra: "Y", verbo: "Yodamos", desc: "Aplicamos soluciones yodadas como antiséptico." },
-  { letra: "Z", verbo: "Zoopatologamos", desc: "Estudiamos patologías generales de los animales." },
+  { letra:"A", verbo:"Acicalamos", desc:"Realizamos acicalamiento clínico en búsqueda de ectoparásitos." },
+  { letra:"A", verbo:"Anestesiamos", desc:"Administramos anestesia en procedimientos poco comunes." },
+  { letra:"A", verbo:"Auscultamos", desc:"Escuchamos sonidos cardiacos y respiratorios con detalle." },
+  { letra:"A", verbo:"Acariciamos", desc:"Evaluamos respuesta emocional como parte de etología clínica." },
+
+  { letra:"B", verbo:"Bromatologamos", desc:"Analizamos composición de alimentos balanceados." },
+  { letra:"B", verbo:"Biosegurizamos", desc:"Implementamos protocolos de bioseguridad en áreas críticas." },
+  { letra:"B", verbo:"Bacteriologamos", desc:"Estudiamos bacterias en muestras animales." },
+  { letra:"B", verbo:"Balanceamos", desc:"Ajustamos raciones alimenticias con precisión." },
+
+  { letra:"C", verbo:"Calcificamos", desc:"Registramos formación ósea en radiología." },
+  { letra:"C", verbo:"Citodiagnosticamos", desc:"Determinamos diagnósticos celulares por citología." },
+  { letra:"C", verbo:"Cromatografiamos", desc:"Aplicamos cromatografía en análisis bioquímicos." },
+  { letra:"C", verbo:"Cardiografiamos", desc:"Realizamos registros electrocardiográficos." },
+
+  { letra:"D", verbo:"Dermatologamos", desc:"Investigamos patologías de piel en especies menores." },
+  { letra:"D", verbo:"Desbridamos", desc:"Retiramos tejido necrótico en heridas." },
+  { letra:"D", verbo:"Desensibilizamos", desc:"Reducimos reacciones alérgicas mediante terapia." },
+  { letra:"D", verbo:"Dosificamos", desc:"Ajustamos dosis exactas de fármacos." },
+
+  { letra:"E", verbo:"Endoscopiamos", desc:"Exploramos cavidades con endoscopio flexible." },
+  { letra:"E", verbo:"Electrocutamos", desc:"Aplicamos eutanasia controlada por electricidad (raro)." },
+  { letra:"E", verbo:"Embriologamos", desc:"Estudiamos desarrollo embrionario animal." },
+  { letra:"E", verbo:"Esterilizamos", desc:"Realizamos esterilización quirúrgica o física de material." },
+
+  { letra:"F", verbo:"Fisiopatologamos", desc:"Investigamos alteraciones fisiológicas." },
+  { letra:"F", verbo:"Fecundamos", desc:"Inducimos fecundación asistida." },
+  { letra:"F", verbo:"Fermentamos", desc:"Controlamos fermentaciones digestivas experimentales." },
+  { letra:"F", verbo:"Frotamos", desc:"Tomamos muestras con hisopado clínico." },
+
+  { letra:"G", verbo:"Gastroenterologamos", desc:"Diagnosticamos trastornos digestivos." },
+  { letra:"G", verbo:"Genotipamos", desc:"Determinamos genotipos de interés zootécnico." },
+  { letra:"G", verbo:"Gametizamos", desc:"Estudiamos procesos relacionados con gametos." },
+  { letra:"G", verbo:"Galvanizamos", desc:"Aplicamos corriente galvánica en terapias experimentales." },
+
+  { letra:"H", verbo:"Hematologamos", desc:"Analizamos parámetros hematológicos." },
+  { letra:"H", verbo:"Histopatologamos", desc:"Estudiamos tejidos en laboratorio." },
+  { letra:"H", verbo:"Hidratamos", desc:"Restituimos líquidos a pacientes deshidratados." },
+  { letra:"H", verbo:"Hepatizamos", desc:"Documentamos alteraciones hepáticas raras." },
+
+  { letra:"I", verbo:"Inmunohistoquimiamos", desc:"Aplicamos técnicas de inmunohistoquímica." },
+  { letra:"I", verbo:"Incidimos", desc:"Realizamos incisiones quirúrgicas." },
+  { letra:"I", verbo:"Intubamos", desc:"Colocamos tubos endotraqueales." },
+  { letra:"I", verbo:"Isotopizamos", desc:"Marcamos con isótopos radioactivos." },
+
+  { letra:"J", verbo:"Jeringamos", desc:"Administramos fármacos con jeringa." },
+  { letra:"J", verbo:"Juzgamos", desc:"Evaluamos críticamente procedimientos clínicos." },
+  { letra:"J", verbo:"Juntamos", desc:"Acopiamos resultados en expediente digital." },
+  { letra:"J", verbo:"Jubilamos", desc:"Retiramos animales de reproducción intensiva." },
+
+  { letra:"K", verbo:"Keratotomizamos", desc:"Realizamos incisión corneal." },
+  { letra:"K", verbo:"Kinesioterapiamos", desc:"Aplicamos ejercicios terapéuticos." },
+  { letra:"K", verbo:"Kinetografiamos", desc:"Registramos movimientos animales." },
+  { letra:"K", verbo:"Kriocauterizamos", desc:"Destruimos tejidos con crioterapia." },
+
+  { letra:"L", verbo:"Laringoscopiamos", desc:"Exploramos laringe." },
+  { letra:"L", verbo:"Lactamos", desc:"Inducimos lactancia en hembras." },
+  { letra:"L", verbo:"Lipoaspiramos", desc:"Extraemos grasa para estudios." },
+  { letra:"L", verbo:"Leucocitamos", desc:"Contamos leucocitos en laboratorio." },
+
+  { letra:"M", verbo:"Microbiologamos", desc:"Estudiamos microorganismos." },
+  { letra:"M", verbo:"Microscopiamos", desc:"Examinamos al microscopio." },
+  { letra:"M", verbo:"Mielografiamos", desc:"Realizamos estudios medulares." },
+  { letra:"M", verbo:"Monocitamos", desc:"Medimos monocitos en sangre." },
+
+  { letra:"N", verbo:"Necropsiamos", desc:"Practicamos necropsias." },
+  { letra:"N", verbo:"Neonatologamos", desc:"Atendemos neonatos animales." },
+  { letra:"N", verbo:"Nervamos", desc:"Estudiamos nervaduras anatómicas." },
+  { letra:"N", verbo:"Nutricionamos", desc:"Diseñamos planes de nutrición." },
+
+  { letra:"O", verbo:"Oftalmoscopiamos", desc:"Exploramos fondo ocular." },
+  { letra:"O", verbo:"Osteotomizamos", desc:"Seccionamos huesos quirúrgicamente." },
+  { letra:"O", verbo:"Otoscopiamos", desc:"Inspeccionamos oído." },
+  { letra:"O", verbo:"Oxigenamos", desc:"Administramos oxígeno terapéutico." },
+
+  { letra:"P", verbo:"Parasitologamos", desc:"Analizamos parásitos." },
+  { letra:"P", verbo:"Patologamos", desc:"Diagnosticamos lesiones." },
+  { letra:"P", verbo:"Plasmidizamos", desc:"Usamos plásmidos en biotecnología." },
+  { letra:"P", verbo:"Proteomizamos", desc:"Analizamos proteínas animales." },
+
+  { letra:"Q", verbo:"Queratinizamos", desc:"Estudiamos queratinización." },
+  { letra:"Q", verbo:"Quimioprofilactamos", desc:"Aplicamos quimioprofilaxis preventiva." },
+  { letra:"Q", verbo:"Quirurgizamos", desc:"Ejecutamos procedimientos quirúrgicos." },
+  { letra:"Q", verbo:"Quimotipamos", desc:"Determinamos quimiotipos bacterianos." },
+
+  { letra:"R", verbo:"Rinoscopiamos", desc:"Exploramos cavidades nasales." },
+  { letra:"R", verbo:"Radiografiamos", desc:"Tomamos radiografías." },
+  { letra:"R", verbo:"Rehidratamos", desc:"Administramos fluidos." },
+  { letra:"R", verbo:"Reproducimos", desc:"Asistimos procesos reproductivos." },
+
+  { letra:"S", verbo:"Serologiamos", desc:"Realizamos pruebas serológicas." },
+  { letra:"S", verbo:"Secuenciamos", desc:"Determinamos secuencias genéticas." },
+  { letra:"S", verbo:"Suturamos", desc:"Cerramos heridas." },
+  { letra:"S", verbo:"Sedamos", desc:"Aplicamos sedación controlada." },
+
+  { letra:"T", verbo:"Traqueotomizamos", desc:"Abrimos tráquea." },
+  { letra:"T", verbo:"Tonometrizamos", desc:"Medimos presión intraocular." },
+  { letra:"T", verbo:"Timpanizamos", desc:"Estudiamos tímpanos." },
+  { letra:"T", verbo:"Tipificamos", desc:"Determinamos tipos celulares." },
+
+  { letra:"U", verbo:"Uretroscopiamos", desc:"Exploramos uretra." },
+  { letra:"U", verbo:"Ultrasonografiamos", desc:"Realizamos ecografías." },
+  { letra:"U", verbo:"Urocultivamos", desc:"Hacemos cultivos de orina." },
+  { letra:"U", verbo:"Ubiquitinamos", desc:"Analizamos proteínas ubiquitinadas." },
+
+  { letra:"V", verbo:"Vasectomizamos", desc:"Practicamos vasectomía." },
+  { letra:"V", verbo:"Vacunamos", desc:"Aplicamos vacunas." },
+  { letra:"V", verbo:"Videografiamos", desc:"Registramos en video procedimientos." },
+  { letra:"V", verbo:"Venopuncionamos", desc:"Accedemos a venas para extracción." },
+
+  { letra:"W", verbo:"Westernbloteamos", desc:"Usamos Western Blot." },
+  { letra:"W", verbo:"Weanizamos", desc:"Aplicamos destete." },
+  { letra:"W", verbo:"Widalizamos", desc:"Practicamos prueba de Widal." },
+  { letra:"W", verbo:"Washingizamos", desc:"Realizamos lavados experimentales." },
+
+  { letra:"X", verbo:"Xenotransplantamos", desc:"Hacemos trasplantes entre especies." },
+  { letra:"X", verbo:"Xerografiamos", desc:"Reproducimos imágenes médicas." },
+  { letra:"X", verbo:"Xilinizamos", desc:"Usamos xilina como anestésico." },
+  { letra:"X", verbo:"Xantocromatizamos", desc:"Observamos coloraciones amarillas en líquidos." },
+
+  { letra:"Y", verbo:"Yodamos", desc:"Aplicamos yodo." },
+  { letra:"Y", verbo:"Yeyunizamos", desc:"Exploramos yeyuno quirúrgicamente." },
+  { letra:"Y", verbo:"Yugulamos", desc:"Canalizamos vena yugular." },
+  { letra:"Y", verbo:"Yacemos", desc:"Practicamos reposo forzado para observación." },
+
+  { letra:"Z", verbo:"Zoopatologamos", desc:"Estudiamos enfermedades animales." },
+  { letra:"Z", verbo:"Zoonotizamos", desc:"Determinamos riesgo zoonótico." },
+  { letra:"Z", verbo:"Zigocitamos", desc:"Analizamos formación de cigotos." },
+  { letra:"Z", verbo:"Zootecniamos", desc:"Aplicamos principios de zootecnia." },
 ];
 
-// Elementos
+// Render
 const results = document.getElementById("results");
 const empty = document.getElementById("empty");
 const tpl = document.getElementById("cardTemplate");
 
-// Render inicial
 render(data);
 
 function render(items){
